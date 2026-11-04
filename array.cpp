@@ -1,6 +1,6 @@
 //let's assume that you have 4 types of bread
 // the number of the bread type is constant
-// how ever you bake new ones of the same types and you 
+// however you bake new ones of the same types and you 
 // want to add the new number to the total of each one
 //so your customers have an idea of the number of the bread left
 // that's beacause you know programming and you have an app. :D
