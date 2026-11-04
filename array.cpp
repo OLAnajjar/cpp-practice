@@ -9,7 +9,7 @@
 
 using namespace std;
 
-void increaseBread(int arr[], int size, int newP){
+void increaseBread(int arr[], int size, int newP){ 
     //here  we need you to exactly specify what array with what
     //size you want to "do" something to it by how much
     for(int i = 0; i < size; i++ ){
