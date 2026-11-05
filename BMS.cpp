@@ -1,7 +1,6 @@
 //Bakery Manegment system version 1.02
 /*You are developing a Bakery Management System using C++.
-Your task is to create a program that manages the quantities of different bread types using a vector.
-*/
+Your task is to create a program that manages the quantities of different bread types using a vector.*/
 
 #include <iostream>
 #include <vector> //needed to able to use them
