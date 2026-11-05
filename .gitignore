@@ -1,1 +1,15 @@
-main
+Compiled programs
+
+*.out *.exe a.out
+
+Temporary files
+
+*.tmp *.log
+
+IDE files
+
+.vscode/ .idea/
+
+Backup files
+
+*~ *.bak
