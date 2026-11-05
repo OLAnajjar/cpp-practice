@@ -9,7 +9,7 @@ yes ir is Gradebook :D.
 course name hence as private member we need courseName to 
 be a string variable
 */
-// including the libraries
+// including the libraries/header files
 #include <iostream>
 // also we need to include the string lib. so we can deal with them
 #include <string>
@@ -47,7 +47,7 @@ int main(){
     string nameOfCourse;
 
     cout<< "Enter the course name, please: "<< endl;
-    getline(cin, nameOfCourse); /*read the input with blanks and store 
+    getline(cin, nameOfCourse); /*reads the input with blanks and store 
     it in the variable nameOfCourse */
     mybook.setCourseName(nameOfCourse); //do not forget to inform the class with the var.
     mybook.displayMessage();
