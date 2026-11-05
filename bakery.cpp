@@ -1,27 +1,32 @@
-//Bakery Manegment system version 1.01
-// here we will add a different number of new bread for each type
-// this is option1: 
-#include <iostream>
+//Bakery Manegment system version 1.02
+/*You are developing a Bakery Management System using C++.
+Your task is to create a program that manages the quantities of different bread types using a vector.
+*/
 
+#include <iostream>
+#include <vector> //needed to able to use them
 using namespace std;
 
-void increaseBread(int arr[], int size, int arr2[], int res[]){
-    //int res[size] = {0}; NO need to do this
-    for(int i = 0; i < size; i++ ){
-        res[i] = arr[i] + arr2[i];
+//here we may create a function and use the vector in it
+void increaseBread(vector<int>& bread, vector<int>& baked, vector<int>& res ){
+    res.resize(bread.size());
+    for(int i = 0; i< bread.size(); i++){
+        res[i] = bread[i] + baked[i];
     }
 }
 
-
 int main(){
-    const int breadType = 4;
-    int bread[breadType] = {5,4,8,11};
-    int baked[breadType] = {8,4,9,4};
-    int res[breadType];
-    
-    increaseBread(bread, breadType, baked, res);
+    vector<int> bread = {8, 5, 9, 7, 5};
+    vector<int> baked = {5, 5, 5, 5, 5};
+    vector<int> res;
+    cout<<bread.size()<< endl; 
+    cout<<baked.size()<< endl; 
+    cout<<res.size()<< endl; 
+    increaseBread(bread, baked, res);
 
-    for(int j = 0; j< breadType; j++){
-        cout << res[j] << " ";
+    cout<<res.size()<< endl; 
+    for(int k = 0; k < res.size(); k++){
+        cout<< res[k]<< " ";
     }
+
 }
