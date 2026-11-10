@@ -1,30 +1,62 @@
-/*                Bakery Stock Inspector:
-- You are developing a small Bakery Stock Inspector using C++.
-- You have an array containing the quantities of 5 different bread types.
-- Your task is to use pointers to inspect and modify the stock.
-Requirements: 
-1. Create an integer array called bread containing: {10, 20, 15, 30, 25}.
-2. Create an integer pointer called ptr that points to the first element of bread.
-3. Use a loop and pointer arithmetic (ptr++) to display all bread quantities.
-4. Move the pointer forward by 2 positions using ptr += 2 and display the value it points to.
-5. Use dereferencing (*ptr) to increase that bread quantity by 5.
-6. Display the updated array.
-7. Create a function called displayBread that receives a pointer and the array size, then displays all elements.*/
-
-// not that cout << *(ptr + i) << " "; => pointer arithmetic instead of array indexing
-
+/*Arrays of function pointers: 
+lets for now make a calculator with 4 operations 
+1) subtraction
+2) addition 
+3) multiplication 
+4) division
+ */
 #include <iostream>
 
 using namespace std;
 
+int subtraction(int a, int b){
+    return (a-b);
+}
+
+int addition(int a, int b){
+    return (a+b);
+}
+
+int multipli(int a, int b){
+    return (a*b);
+}
+
+int division(int a, int b){
+    return(a/b);
+}
+
+int operation(int a, int b, int (*functionptr)(int, int)){
+    int g = (*functionptr)(a, b);
+    return(g);
+} 
+
+
 int main(){
-    int bread[] = {10, 20, 15, 30, 25};
-    int *ptr = bread;//no need to &bread[0]
-    int size = sizeof(bread)/sizeof(bread[0]);
-    for(int i = 0; i< size; i++){
-        cout << *ptr << " ";
-        ptr++;
-    }
+    int a,b;
+    // 1st manner to use the function pointer
+    int (*functionptr)(int, int);
+
+    functionptr = addition;
+
+    cout << (*functionptr)(8,9)<< endl;
+
+    // 2nd manner to do this
+
+    cout<< (*subtraction)(5,1)<< endl;
+
+    //3rd manner:
+
+    cout<< multipli(8,2)<<  endl;
+
+    //4th manner
+
+    int m = operation(125,5, functionptr);
+
+    cout << "m: "<< m << endl;
+
+    functionptr = division;
+    m = operation(125,5, functionptr);
+    cout<<"m: "<< m << endl;
 
 
 }
